@@ -1,0 +1,27 @@
+{{ define "head" }}
+<meta name="description" content={{ .Site.Params.description }}>
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/projects.css" media="all">
+
+<!-- fontawesome -->
+<script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
+{{ end }}
+
+{{ define "title" }}
+{{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{- partial "sections/hero/index.html" . -}}
+{{- partial "sections/about.html" . -}}
+{{- partial "sections/techstack.html" . -}}
+{{- partial "sections/projects.html" . -}}
+{{- partial "sections/experience.html" . -}}
+{{- partial "sections/education.html" . -}}
+{{- partial "sections/achievements.html" . -}}
+{{- partial "sections/contact.html" . -}}
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "db24ddd19d96404698df66414b668012"}'></script><!-- End Cloudflare Web Analytics -->
+{{ end }}

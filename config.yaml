@@ -1,0 +1,368 @@
+---
+baseURL: https://geekerhwh.pages.dev/
+languageCode: en-us
+title: Wenhao Hu (胡文昊) | BE AI at Chongqing University | DevOps/Backend Engineer
+theme: hugo-profile
+languages:
+  en:
+    languageName: English
+    languageCode: en
+    contentDir: content/en
+    flag: flag-us
+    weight: 1
+  zh:
+    languageName: 中文
+    languageCode: zh
+    contentDir: content/zh
+    flag: flag-cn
+    weight: 2
+taxonomies:
+  en_tag: en_tags
+  zh_tag: zh_tags
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - RSS
+Paginate: 3
+enableRobotsTXT: true
+disqusShortname: https-geekerhwh-github-io
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+Menus:
+  main:
+    - Dropdown menu: null
+    - identifier: Blogs
+      title: Blogs languages
+      name: Blogs
+      weight: 1
+    - identifier: en
+      title: English blogs
+      name: English blogs
+      url: /blogs/
+      parent: Blogs
+      weight: 2
+    - identifier: zh
+      title: 中文博客
+      name: 中文博客
+      url: /zh/blogs/
+      parent: Blogs
+      weight: 3
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+    - Dropdown menu: null
+    - identifier: more
+      title: more
+      name: More
+      weight: 3
+    - identifier: RSS
+      title: RSS
+      name: RSS
+      url: https://geekerhwh.pages.dev/blogs/index.xml
+      parent: more
+      weight: 1
+    - identifier: TG
+      title: TG
+      name: Telegram
+      url: https://t.me/+KmkbQBwj3xdmYWQ1
+      parent: more
+      weight: 2
+    - identifier: Site's updates
+      title: Site's updates
+      name: Site's updates
+      url: https://github.com/Geekerhwh/geekerhwh.github.io
+      parent: more
+      weight: 3
+params:
+  title: Wenhao Hu's Site
+  description: Text about my cool site
+  staticPath: ""
+  favicon: /hashProfile.png
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+  theme:
+    defaultTheme: light
+  font:
+    fontSize: 1.3rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+  navbar:
+    align: ms-auto
+    brandName: Wenhao Hu's Site
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: true
+      disableEducation: true
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+  hero:
+    enable: true
+    intro: Nice to meet you, my name is
+    title: Wenhao Hu
+    subtitle: a student at Chongqing Uni
+    content: >-
+      #### Site Manual
+
+      Welcome to my site! Feel free to explore my work and learn more about me.
+
+      My site is also my second brain database, it records my knowledge and memory.
+
+      To search specific content you can use ctrl+K to look through the index.
+
+      This site is imaginative, philosophical, and full of technical and financial ideas, hope you enjoy it
+
+
+      ##### %$@!~&*
+
+      I'm racing with time, this site will witness this great game. And this game never gonna ends.
+
+      My mother is a great woman, every lesson she has told makes me a better person.
+
+      We both have the goal of living a better life.
+    image: /images/gallery/me3.JPG
+    bottomImage:
+      enable: true
+    button:
+      enable: false
+      name: Resume
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/GeekerHWH
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/wenhao-hu-37565a287/
+        - icon: fab fa-telegram
+          url: https://t.me/+KmkbQBwj3xdmYWQ1
+        - icon: fas fa-rss
+          url: https://geekerhwh.pages.dev/blogs/index.xml
+  about:
+    enable: true
+    title: About Me
+    image: /images/code.gif
+    todolist: |-
+      To Do List:
+      1. [x] AWS SAA-C03 Cert
+      1. [ ] AWS SysOps Certification
+      1. [ ] Azure SysAdmin Certification
+      1. [ ] master Kubernetes
+    content: >-
+      I am currently a college student at [Chongqing
+      University](https://www.cqu.edu.cn/) in Chongqing city, China.
+
+
+      I know very well the truth of "Talking is cheap, show me your code".
+
+      I'm always eager to get my hands dirty.
+
+
+      I am open to opportunities in DevOps, cloud administration, and machine learning.
+
+      Please feel free to reach out if you are interested in collaborating with me.
+
+
+      <a href="https://github.com/GeekerHWH"><img align="center" src="https://github-readme-stats-geekerhwhs-projects.vercel.app/api/top-langs/?username=GeekerHWH&layout=compact&theme=buefy&hide_border=true" /></a>
+
+      <a href="https://credly.com/badges/a5ba8037-5804-4de6-ac45-f66d818e00cb"><img src="/images/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect"></a>
+    skills:
+      enable: true
+      title: "Here are a few techs I've been working with recently:"
+      items:
+        - Golang
+        - AWS
+        - Docker
+        - Kubernetes
+        - Github Actions
+        - Ansible
+  techstack:
+    enable: true
+  projects:
+    enable: true
+    items:
+      - title: mirrorSpeedTest
+        content: >-
+          This tool is mainly to help Debian users to select the best apt Repo
+          for themselves,
+
+          especially for people who live in China with a special Network Environment, now it
+
+          has supported people all of the world.
+        image: /images/projects/debian-wallpaper-1920x1080.jpg
+        featured:
+          name: Repo Link
+          link: https://github.com/GeekerHWH/mirrorSpeedTest
+        badges:
+          - Go routine
+          - Debian
+          - Docker
+          - Github Actions
+        links:
+          - icon: fab fa-github
+            url: https://github.com/GeekerHWH/mirrorSpeedTest
+      - title: CustomizeDebian12
+        content: Quick setup X11 & gnome-core dev desktop environment based on Debian 12
+          bookworm. Now it's in progress to support customizing Debian 12 into a local lab in VMs.
+        image: /images/projects/bash.jpg
+        featured:
+          name: Repo Link
+          link: https://github.com/GeekerHWH/CustomizeDebian12
+        badges:
+          - Bash
+          - Nvidia-driver
+          - KVM
+          - WineHQ
+          - Docker
+        links:
+          - icon: fab fa-github
+            url: https://github.com/GeekerHWH/CustomizeDebian12
+  experience:
+    enable: true
+    title: Experience & Certification
+    items:
+      - job: Backend Developer(Intern)
+        company: China Mobile
+        companyUrl: https://chinamobileltd.com
+        date: Jan 2024 - present
+        featuredLink:
+          enable: false
+          name: View the project
+          url: https://github.com/GeekerHWH/mirrorSpeedTest
+        content: |-
+          Automated data reporting: During the financial audit process, 
+          Pyexcel + MySQL + mobile self-developed Panjiang(磐匠) RPA platform
+          was used to **automatically download and import financial vouchers into the database,
+          process and connect financial report data, and automatically generate daily,
+          ten-day, and monthly reports,** replacing the work of approximately 3 financial personnel.
+      - job: AWS Certified Solutions Architect - Associtate
+        company: AWS
+        companyUrl: https://aws.amazon.com/
+        date: Nov 2023 - Nov 2026
+        featuredLink:
+          name: Credly Link
+          enable: true
+          url: https://www.credly.com/badges/a5ba8037-5804-4de6-ac45-f66d818e00cb
+        info:
+          enable: true
+          content: Validity period
+        content: >-
+          - Solid Knowledge and skills in compute, networking, storage, and
+          database AWS services as well as AWS deployment and management
+          services
+
+          - Proficient in Cloud operations and high-availability and high-scalability architecture design knowledge
+
+          - Knowledge and skills in deploying, managing, and operating workloads on AWS as well as implementing security controls and compliance requirements
+
+          - Knowledge and skills in using the AWS Management Console and the AWS Command Line Interface (CLI)Understanding of the AWS Well-Architected Framework, AWS networking, security services, and the AWS global infrastructure
+
+          - Ability to identify which AWS services meet a given technical requirement and to define technical requirements for an AWS-based application
+  education:
+    enable: true
+    index: false
+    items:
+      - title: International English Language Testing System (IELTS)
+        date: 2023 - 2025
+        result: Overall 7 (Listening 7.5; Reading 8; Writing 6; Speaking 6)
+      - title: Bachelor of Engineering in Artificial Intelligence
+        school:
+          name: School of Big Data & Software, Chongqing University
+          url: https://www.cse.cqu.edu.cn/
+        date: 2021 - 2025
+        score: 82.59(Top 20%)
+        content: >-
+          <details>
+            <summary>Click to see professional courses in my Uni</summary>
+
+            - Data Structures & Algorithms (in C)
+            - Database Principles and Design(MySQL)
+            - Operating System
+            - Computer Network
+            - Software Engineering
+            - Information Security
+            - Human-Computer Interaction (HCI) Design
+            - Machine Learning
+            - Deep Learning
+            - Computer Vision
+            - Natural Language Processing
+          </details>
+
+           2023.07-present: Served as team leader in the first Chongqing University
+          Student Innovation Training Project (Research Project on Controlled Text 
+
+          Generation Methods under Hard Constraints), responsible for NLP model construction, deployment, 
+
+          and testing, and also responsible for project establishment/mid-term/final debates
+        featuredLink:
+          enable: false
+          name: My academic record
+          url: https://example.com
+  achievements:
+    enable: false
+    items:
+      - title: First Prize in China Youth Photography Competition
+        content: CyberChongQing is the first impression of this city
+        url: https://geekerhwh.pages.dev/gallery/
+      - title: Admitted to China's 985 University in one fell swoop in the college
+          entrance examination
+        content: >-
+          The 985 Program is an elite education program for China’s Top 1%.
+
+          It aims to cultivate talents who will make outstanding contributions to top careers in the new era.
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: https://github.com/gurusabarish/hugo-profile
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+  contact:
+    enable: true
+    content: >-
+      My inbox is always open. Whether you have a question or just want to
+      say hi, 
+
+      I'll try my best to get back to you!
+    email: hacker.huwenhao@gmail.com
+    btnName: Mail me
+  footer:
+    recentPosts: null
+    socialNetworks:
+      github: https://github.com/GeekerHWH
+      linkedin: https://www.linkedin.com/in/wenhao-hu-37565a287/
+      telegram: https://t.me/+KmkbQBwj3xdmYWQ1
+      rss: https://geekerhwh.pages.dev/blogs/index.xml
+  listPages:
+    disableFeaturedImage: false
+  singlePages:
+    readTime:
+      enable: true
+      content: min read
+    scrollprogress:
+      enable: true
+  terms:
+    read: Read
+    toc: Table Of Contents
+    copyright: All rights reserved
+    pageNotFound: Page not found
+    emailText: Check out this site
+  datesFormat:
+    article: Jan 2, 2006
+    articleList: Jan 2, 2006
+    articleRecent: Jan 2, 2006
