@@ -48,11 +48,25 @@ Expression may consist of: operators, options, tests, and actions.
 list blocks information in tree format
 
 ## fdisk
-<details>
-  <summary>Click to see options</summary>
-  
-  - -l list storage device information
-</details>
+It is an interactive tool, here are some commonly used commands:
+- n - new a partition
+- d - delete a partition
+- l - list all available kinds of partition
+
+## mkfs
+click tab to see what file systems are supported
+
+## mount
+```bash
+mount <device> <directory>
+```
+
+> to enable mount automatically, you need to edit `/etc/fstab` (file systems table)
+
+## umount
+```bash
+umount <device>
+```
 
 ## ln
 [Chinese reference](https://runoob.com/note/29134)
@@ -146,6 +160,20 @@ Here, ppa:example/ppa is the actual address of the PPA. After running this comma
 ## nmtui
 My personal understanding for the name is network manager terminal-ui
 ![nmtui](/imagesInBlogs/LinuxCLI/nmtui.png)
+
+## crontab
+usage:
+crontab [-u user] [-n] file
+crontab [ -u user ] [ -i ] { -e | -l | -r }
+
+- -h	(displays this help message)
+- -u user	(choose the user whose crontab is touched)
+- -e	(edit user's crontab) will let you specify a text-editor(Vim)
+- -l	(list user's crontab)
+- -r	(delete user's crontab)
+- file	(default operation is replace, per 1003.2)
+- -n	(dry run: checks the syntax, then bails out)
+
 
 ## iptables
 Firewall system will check the rules from top to bottom, and will end as soon as it match the one.
