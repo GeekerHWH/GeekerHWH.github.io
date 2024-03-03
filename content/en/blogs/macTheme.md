@@ -1,12 +1,13 @@
 ---
 title: "How to make your Gnome Desktop like macOS"
-date: 2024-02-20T00:00:00+08:00
+date: 2024-01-20T00:00:00+08:00
 draft: false
 author: "GeekerHWH"
 category:
     - Technology
 en_tags:
     - Debian
+    - Linux
     - Themes
 image: /imagesInBlogs/macTheme/macbook.png
 description: "How to make your Gnome Desktop like macOS"

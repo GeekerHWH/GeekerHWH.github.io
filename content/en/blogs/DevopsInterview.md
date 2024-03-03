@@ -1,6 +1,6 @@
 ---
 title: "Devops Interview QA Collection"
-date: 2024-02-29T08:55:56+08:00
+date: 2024-01-14T08:55:56+08:00
 draft: false
 author: "GeekerHWH"
 category: 
@@ -20,6 +20,12 @@ toc: true
     - Principle: the binlog (binary log) will record every change that was made in master, the ioThread in slave will read that binlog and write the changes in "Relay log". After that, the "SQLThread" will perform the changes to the slave's data.
 ![master-slave](/imagesInBlogs/DevopsInterview/master-slave.png)
 
+2. What is Optimistic Locking and Pessimistic Locking
+3. Differences between Delete and Truncate and Drop
+    - Delete: can filt data using `where` keyword, needs `commit` and supports `rollback`
+    - Truncate: remove all the data in the table and can't be rolled back
+    - Drop: remove a table and can't be rolled back
+
 ## Operating System
 1. RAID
 
@@ -38,4 +44,9 @@ RAID 5: 3 x Blocks to get 1 redundant copy, with theoriodically 3X speed up
 RAID 10: RAID 1 x RAID 0
 
 ![RAID 10](/imagesInBlogs/DevopsInterview/RAID10.jpg)
+
+2. When will it fall into kernel mode?
+- trap
+- interrupt
+- exception
 ## Networking

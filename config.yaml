@@ -1,7 +1,7 @@
 ---
 baseURL: https://geekerhwh.pages.dev/
 languageCode: en-us
-title: Wenhao Hu (胡文昊) | BE AI at Chongqing University | DevOps/Backend Engineer
+title: Wenhao Hu (胡文昊) | BE AI at Chongqing University | DevOps/DBA Engineer
 theme: hugo-profile
 languages:
   en:
@@ -48,8 +48,8 @@ Menus:
       parent: Blogs
       weight: 2
     - identifier: zh
-      title: 中文博客
-      name: 中文博客
+      title: 中文博客(不与英文同步)
+      name: 中文博客(不与英文同步)
       url: /zh/blogs/
       parent: Blogs
       weight: 3
@@ -91,6 +91,19 @@ params:
   animate: true
   theme:
     defaultTheme: light
+  color:
+    textColor: "#343a40"
+    secondaryTextColor: "#6c757d"
+    backgroundColor: "#eaedf0"
+    secondaryBackgroundColor: "#64ffda1a"
+    primaryColor: "#007bff"
+    secondaryColor: "#f8f9fa"
+  # color:
+  #   textColor: "#263238"
+  #   secondaryTextColor: "#212121"
+  #   backgroundColor: "#FFE082"
+  #   primaryColor: "#00BFA5"
+  #   secondaryColor: "#FFCC80"
   font:
     fontSize: 1.3rem
     fontWeight: 400
@@ -114,7 +127,7 @@ params:
     enable: true
     intro: Nice to meet you, my name is
     title: Wenhao Hu
-    subtitle: a student at Chongqing Uni
+    subtitle: DevOps Engineer at Meituan
     content: >-
       #### Site Manual
 
@@ -160,9 +173,8 @@ params:
     todolist: |-
       To Do List:
       1. [x] AWS SAA-C03 Cert
-      1. [ ] AWS SysOps Certification
       1. [ ] Azure SysAdmin Certification
-      1. [ ] master Kubernetes
+      1. [ ] CKAD & CKA
     content: >-
       I am currently a college student at [Chongqing
       University](https://www.cqu.edu.cn/) in Chongqing city, China.
@@ -185,12 +197,12 @@ params:
       enable: true
       title: "Here are a few techs I've been working with recently:"
       items:
-        - Golang
-        - AWS
-        - Docker
+        - KVM (libvert)
+        - TiDB
         - Kubernetes
-        - Github Actions
         - Ansible
+        - Prometheuse
+        - Grafana
   techstack:
     enable: true
   projects:
@@ -217,7 +229,8 @@ params:
           - icon: fab fa-github
             url: https://github.com/GeekerHWH/mirrorSpeedTest
       - title: CustomizeDebian12
-        content: Quick setup X11 & gnome-core dev desktop environment based on Debian 12
+        content:
+          Quick setup X11 & gnome-core dev desktop environment based on Debian 12
           bookworm. Now it's in progress to support customizing Debian 12 into a local lab in VMs.
         image: /images/projects/bash.jpg
         featured:
@@ -236,6 +249,25 @@ params:
     enable: true
     title: Experience & Certification
     items:
+      - job: Blade DevOps & SRE (Intern)
+        company: Meituan
+        companyUrl: https://www.meituan.com/en-US/about-us
+        date: May 2024 - Dec 2024
+        featuredLink:
+          enable: false
+          name: View the project
+          url: https://github.com/GeekerHWH/mirrorSpeedTest
+        content: |-
+          I was responsible for developing Operator and CI/CD standard pipelines for Blade, which is a Cloud-Native Distributed Database competing with TiDB and OceanBase.
+          Also I took part in operation stuffs, deployed different components in Dev, Test cluster environment.
+          During my intern career, I learned tons of things like:
+          - developing side-car log_collector and webhook in Operator stacks.
+          - ArgoCD to support cloud-native CD pipelines.
+          - Chaos-Mesh to do a mock failure such as pod pending or network partition
+          - Grafana + VictoriaMetrics to monitor information in different cluster.
+          - countless SOP (Standard Operation Procedure) and so on......
+          
+
       - job: Backend Developer(Intern)
         company: China Mobile
         companyUrl: https://chinamobileltd.com
@@ -250,6 +282,7 @@ params:
           was used to **automatically download and import financial vouchers into the database,
           process and connect financial report data, and automatically generate daily,
           ten-day, and monthly reports,** replacing the work of approximately 3 financial personnel.
+
       - job: AWS Certified Solutions Architect - Associtate
         company: AWS
         companyUrl: https://aws.amazon.com/
@@ -319,7 +352,8 @@ params:
       - title: First Prize in China Youth Photography Competition
         content: CyberChongQing is the first impression of this city
         url: https://geekerhwh.pages.dev/gallery/
-      - title: Admitted to China's 985 University in one fell swoop in the college
+      - title:
+          Admitted to China's 985 University in one fell swoop in the college
           entrance examination
         content: >-
           The 985 Program is an elite education program for China’s Top 1%.
@@ -342,7 +376,12 @@ params:
     email: hacker.huwenhao@gmail.com
     btnName: Mail me
   footer:
-    recentPosts: null
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/GeekerHWH
       linkedin: https://www.linkedin.com/in/wenhao-hu-37565a287/

@@ -166,7 +166,8 @@ git push -u origin main # -u set the origin as the main's upstream, you can use 
 ```bash
 git remote set-url <name> <newurl> # git remote set-url origin xxxxx.git
 ```
-
+### Get latest released version from Github
+https://api.github.com/repos/${AuthorName}/${ProjectName}/releases/latest
 
 
 ## Theoriodical questions in Interview(Continually updated)
