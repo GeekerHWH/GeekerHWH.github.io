@@ -13,6 +13,8 @@ toc: true
 ---
 
 > This page only lists some commonly used commands and their options, for more details, please check `man` command or use the official docs!
+> `apropos` is another command you should master to search in `man`
+> I highly recommend you to read [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line/blob/master/README.md)
 
 ## Special Notes
 - the `=` in shell scripts is to set value of variable, ` = ` is conditional character
@@ -27,6 +29,11 @@ sudo shutdown now -r
 find [path...] [expression]
 ```
 Expression may consist of: operators, options, tests, and actions.
+
+## stat
+```bash
+stat filename
+```
 
 ## free
 <details>
@@ -48,11 +55,25 @@ Expression may consist of: operators, options, tests, and actions.
 list blocks information in tree format
 
 ## fdisk
-<details>
-  <summary>Click to see options</summary>
-  
-  - -l list storage device information
-</details>
+It is an interactive tool, here are some commonly used commands:
+- n - new a partition
+- d - delete a partition
+- l - list all available kinds of partition
+
+## mkfs
+click tab to see what file systems are supported
+
+## mount
+```bash
+mount <device> <directory>
+```
+
+> to enable mount automatically, you need to edit `/etc/fstab` (file systems table)
+
+## umount
+```bash
+umount <device>
+```
 
 ## ln
 [Chinese reference](https://runoob.com/note/29134)
@@ -61,6 +82,8 @@ ln f1 f2
 ln -s f1 f2
 ln -s /path/to/the/sourcefile /path/to/the/link
 ```
+
+## readlink
 
 ## alias
 ```bash
@@ -103,6 +126,25 @@ ftp> put source_path_of_your_file
   - -O set the name of output file the same as the file in remote server
 </details>
 
+## netstat
+```bash
+netstat -tulpn
+```
+
+## ss
+```bash
+ss -tulpn
+```
+
+## ps
+```bash
+ps -aux
+```
+
+## top
+
+## htop
+
 ## tar
 <details>
   <summary>Click to see options</summary>
@@ -138,6 +180,11 @@ sudo add-apt-repository ppa:example/ppa
 ```
 Here, ppa:example/ppa is the actual address of the PPA. After running this command, the system will ask for confirmation to add the PPA, and you need to confirm.
 
+#### GPG
+```bash
+apt-key list
+```
+
 ### dnf
 
 ### pipx
@@ -146,6 +193,20 @@ Here, ppa:example/ppa is the actual address of the PPA. After running this comma
 ## nmtui
 My personal understanding for the name is network manager terminal-ui
 ![nmtui](/imagesInBlogs/LinuxCLI/nmtui.png)
+
+## crontab
+usage:
+crontab [-u user] [-n] file
+crontab [ -u user ] [ -i ] { -e | -l | -r }
+
+- -h	(displays this help message)
+- -u user	(choose the user whose crontab is touched)
+- -e	(edit user's crontab) will let you specify a text-editor(Vim)
+- -l	(list user's crontab)
+- -r	(delete user's crontab)
+- file	(default operation is replace, per 1003.2)
+- -n	(dry run: checks the syntax, then bails out)
+
 
 ## iptables
 Firewall system will check the rules from top to bottom, and will end as soon as it match the one.

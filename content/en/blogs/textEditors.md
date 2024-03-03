@@ -16,6 +16,18 @@ description: ""
 toc: true
 ---
 
+## Redirection Operators
+```bash
+echo "some content that you want to append to the file" >> /path/to/your/file
+```
+
+```bash
+cat << 'EOF' >> /path/to/the/file
+some content that you want to append to the file
+some content that you want to append to the file
+some content that you want to append to the file
+EOF
+```
 ## Vim
 commonly used shortcuts:
 ```bash
