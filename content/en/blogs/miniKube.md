@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes for Absolute Beginners"
+title: "MiniKube for Absolute Beginners"
 date: 2024-02-21T00:00:00+08:00
 draft: false
 author: "GeekerHWH"
@@ -16,8 +16,9 @@ toc: true
 This page is the note for learning Kubernetes, I took this from the Udemy course
 [@Mumshad Mannambeth](https://www.udemy.com/course/learn-kubernetes/?couponCode=KEEPLEARNING)
 
-## Concepts
-- Node: a physical or virtual machine where k8s installed, and it's where containers will be launched by k8s.
+## Theory
+### Concepts
+- Node: a physical or virtual machine where kubelet was installed, and it's where containers will be launched.
 - Cluster: a set of nodes grouped together
 - Master: responsible for orchestration and monitor the status of nodes
 - [Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/)
@@ -33,30 +34,35 @@ This page is the note for learning Kubernetes, I took this from the Udemy course
 - Container Runtime: docker engine
 ![architecture](/imagesInBlogs/k8s/architecture.png)
 
-## minikube
-minikube quickly sets up a local Kubernetes cluster on macOS, Linux, and Windows. it mainly focus on helping application developers and new Kubernetes users.
+## MiniKube Hands-on
+MiniKube quickly sets up a local Kubernetes cluster on macOS, Linux, and Windows. it mainly focus on helping application developers and new Kubernetes users.
 
+The cluster is in a VM or a Container, master node and worker node are combined in just one node called "minikube"
+
+Everything we are going to create is within this special node, including Pods, Development, Service, etc...
+
+### Start minikube cluster
 ```bash
-# minikube config set driver kvm2
-# registry-mirror is an array to store the url of docker registry
-minikube start --driver=[docker/kvm2]\
-               --registry-mirror=[]
-
-# usable for me
 minikube start --driver=docker\
-               --image-mirror-country=cn\
-               --registry-mirror=https://docker.nju.edu.cn,https://shraym0v.mirror.aliyuncs.com\
-               --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers
-```
+               --static-ip={the_ip_you_want}
 
-## kubectl
+# usable for me (as a Chinese user)
+minikube start --driver=docker\
+               --static-ip=192.168.100.100\
+               --image-mirror-country=cn
+# or
+minikube start --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers'
+```
+### Start minikube dashboard
 ```bash
-kubectl run <container> # deploy an application on the cluster
-kubectl cluster-info # view the infomation
-kubectl get nodes # list all the nodes part of the cluster
-kubectl run <pod_name> --image=<image_name>
-kubectl delete pods <pod_name>
+minikube dashboard
 ```
+then your browser will automatically create a new tab with kubernetes dashboard
 
-## Deployment Strategies
+![dashboard](/imagesInBlogs/k8s/dashboard.png)
+
+
+## Deployment
+### Deployment Strategies
+Recreate vs. RollingUpdate
 ![](/imagesInBlogs/k8s/deploymentStrategy.png)
