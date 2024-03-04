@@ -90,7 +90,7 @@ params:
   mathjax: false
   animate: true
   theme:
-    defaultTheme: light
+    defaultTheme: dark
   font:
     fontSize: 1.3rem
     fontWeight: 400
