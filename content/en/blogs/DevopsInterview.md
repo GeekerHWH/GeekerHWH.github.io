@@ -1,6 +1,6 @@
 ---
 title: "Devops Interview QA Collection"
-date: 2024-02-29T08:55:56+08:00
+date: 2024-02-02T08:55:56+08:00
 draft: false
 author: "GeekerHWH"
 category: 

@@ -7,6 +7,7 @@ category:
     - Technology
 en_tags:
     - Debian
+    - Linux
     - Themes
 image: /imagesInBlogs/macTheme/macbook.png
 description: "How to make your Gnome Desktop like macOS"

@@ -1,6 +1,6 @@
 ---
 title: "KVM Configuration Manual"
-date: 2024-02-03T00:00:00+08:00
+date: 2024-02-14T00:00:00+08:00
 draft: false
 author: "GeekerHWH"
 category:
@@ -8,6 +8,7 @@ category:
 en_tags:
     - KVM
     - Virtualization
+    - Linux
     - Debian
 image: /images/blogs/KVM-1920x1080.jpg
 description: "this page list commands that are commonly used when installing KVM with Virtual Machine Manager"

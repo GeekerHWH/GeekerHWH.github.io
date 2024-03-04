@@ -21,17 +21,95 @@ please check `dialog -h` or much more detailed one `man dialog`.
 Like any other front-end technology, I highly recommend you to follow the instruction with hands dirty.
 
 
+
 ## Universal Options
 ```bash
 --title <title> to specify the widget's title
 ```
-## Box options
+
+
+
+## Basic Box options
+
+### --msgbox
+To display some information
+```bash
+--msgbox       <text> <height> <width>
+```
+example
+```bash
+dialog --title "Msgbox Example" --msgbox "This is the message" 0 0;clear
+```
+![msgbox](/imagesInBlogs/dialog/msgbox.png)
+
+## --prgbox
+```bash
+--prgbox       <text> <command> <height> <width>
+```
+```bash
+dialog --title "Prgbox Example" --prgbox "ls -l" 40 64;clear
+```
+![prgbox](/imagesInBlogs/dialog/prgbox.png)
+
+
+### --yesno
+The easiest one, the syntax is as following:
+```bash
+--yesno        <text> <height> <width>
+```
+let's see an example
+```bash
+choice=$(dialog --stdout --title "Yesno Example" --yesno "yes or no?" 0 0 && echo "1" || echo "2");clear
+# You can get the value of the result
+echo $choice
+```
+![yesno](/imagesInBlogs/dialog/yesno.png)
+
+We created a yesno, which will be displayed to stdout, with a title named "Yesno Example", with some text to describe it. Zero means to automatically adjust the height of it and the width of it according to the terminal size.
+
+
+### --menu (Single-choice box)
+```bash
+--menu         <text> <height> <width> <menu height> <tag1> <item1>...
+```
+
+```bash
+selected_option=$(dialog --stdout --title "Menu Example" --menu "use Arrow keys to select, Enter to confirm" 0 0 0 \
+    1 "Option 1" \
+    2 "Option 2" \
+    3 "Option 3" \
+    4 "Option 4");clear
+
+# You can get the value of the result
+echo $selected_option
+```
+![menu](/imagesInBlogs/dialog/menu.png)
+
+We created a menu, which will be displayed to stdout, with a title named "Menu Example", with some text to describe how to interact with it. Zero means to automatically adjust the height of it, the width of it, and the menu-height of it according to the terminal size. Then "1" is the first tag, "Option 1" is the first item......
+
+
+### --checklist (Multi-choice box)
+```bash
+--checklist    <text> <height> <width> <list height> <tag1> <item1> <status1>...
+```
+
+```bash
+selected_options=$(dialog --stdout --title "Checklist Example" --checklist "use Space to choose, Enter to confirm" 0 0 0 \
+    1 "option 1" off \
+    2 "option 2" on \
+    3 "option 3" off \
+    4 "option 4" off);clear
+# # You can get the value of the result
+echo $selected_options
+```
+![checklist](/imagesInBlogs/dialog/checklist.png)
+
 
 ### --buildlist
 ```bash
 --buildlist    <text> <height> <width> <list-height> <tag1> <item1> <status1>...
 ```
-Now here's an example,
+
 ```bash
 selected_options=$(dialog --stdout --title "Build List Example" --buildlist "use Space to choose, Enter to confirm" 0 0 0 \
     1 "Option 1" on \
@@ -45,35 +123,44 @@ echo $selected_options
 
 We created a buildlist, which will be displayed to stdout, with a title named "Build List Example", with some text to describe how to interact with it. Zero means to automatically adjust the height of it, the width of it, and the list-height of it according to the terminal size. Then "1" is the first tag, "Option 1" is the first item, the "on" is the first status......
 
+
+### --inputbox
+```bash
+--inputbox     <text> <height> <width> [<init>]
+```
+
+```bash
+user_input=$(dialog --stdout --title "Inputbox Example" --inputbox "Please input some text" 0 0);clear
+# You can get the value of the result
+echo $user_input
+```
+![inputbox](/imagesInBlogs/dialog/inputbox.png)
+
+
+### --fselect
+```bash
+--fselect      <filepath> <height> <width>
+```
+
+```bash
+selected_file=$(dialog --stdout --title "Fselect Example" --fselect /Default/Path 0 0);clear
+# You can get the value of the result
+echo $selected_file
+```
+![fselect](/imagesInBlogs/dialog/fselect.png)
+
+
 ### --calendar
 ```bash
 --calendar     <text> <height> <width> <day> <month> <year>
 ```
 
 ```bash
-selected_date=$(dialog --stdout --title "Calendar Example" --calendar "use Arrow keys to select, Enter to confirm" 0 0)
+selected_date=$(dialog --stdout --title "Calendar Example" --calendar "use Arrow keys to select, Enter to confirm" 0 0);clear
 # You can get the value of the result
 echo $selected_date
 ```
 ![calendar](/imagesInBlogs/dialog/calendar.png)
-
-### --checklist (Multi-choice box)
-```bash
---checklist    <text> <height> <width> <list height> <tag1> <item1> <status1>...
-```
-
-```bash
-selected_options=$(dialog --stdout --title "Checklist Example" --checklist "use Space to choose, Enter to confirm" 0 0 0 \
-    1 "option 1" off \
-    2 "option 2" on \
-    3 "option 3" off \
-    4 "option 4" off)
-# # You can get the value of the result
-echo "你选择了选项: $selected_options"
-```
-![checklist](/imagesInBlogs/dialog/checklist.png)
-
-
 
 
 
@@ -111,42 +198,28 @@ Common options:
 [--trace <file>] [--trim] [--version] [--visit-items]
   [--week-start <str>] [--yes-label <str>]
 Box options:
-  --checklist    <text> <height> <width> <list height> <tag1> <item1> <status1>...
   --dselect      <directory> <height> <width>
   --editbox      <file> <height> <width>
   --form         <text> <height> <width> <form height> <label1> <l_y1> <l_x1> <item1> <i_y1> <i_x1> <flen1> <ilen1>...
-  --fselect      <filepath> <height> <width>
   --gauge        <text> <height> <width> [<percent>]
-  --infobox      <text> <height> <width>
-  --inputbox     <text> <height> <width> [<init>]
-  --inputmenu    <text> <height> <width> <menu height> <tag1> <item1>...
-  --menu         <text> <height> <width> <menu height> <tag1> <item1>...
+  **--inputmenu    <text> <height> <width> <menu height> <tag1> <item1>...
   --mixedform    <text> <height> <width> <form height> <label1> <l_y1> <l_x1> <item1> <i_y1> <i_x1> <flen1> <ilen1> <itype>...
   --mixedgauge   <text> <height> <width> <percent> <tag1> <item1>...
-  --msgbox       <text> <height> <width>
   --passwordbox  <text> <height> <width> [<init>]
   --passwordform <text> <height> <width> <form height> <label1> <l_y1> <l_x1> <item1> <i_y1> <i_x1> <flen1> <ilen1>...
   --pause        <text> <height> <width> <seconds>
-  --prgbox       <text> <command> <height> <width>
-  --programbox   <text> <height> <width>
   --progressbox  <text> <height> <width>
   --radiolist    <text> <height> <width> <list height> <tag1> <item1> <status1>...
   --rangebox     <text> <height> <width> <min-value> <max-value> <default-value>
   --tailbox      <file> <height> <width>
   --tailboxbg    <file> <height> <width>
-  --textbox      <file> <height> <width>
   --timebox      <text> <height> <width> <hour> <minute> <second>
   --treeview     <text> <height> <width> <list-height> <tag1> <item1> <status1> <depth1>...
-  --yesno        <text> <height> <width>
 
 Auto-size with height and width = 0. Maximize with height and width = -1.
 Global-auto-size if also menu_height/list_height = 0.
 
 ## man dialog
-DIALOG(1)                   General Commands Manual                  DIALOG(1)
-
-NAME
-       dialog - display dialog boxes from shell scripts
 
 SYNOPSIS
        dialog --clear
@@ -154,36 +227,7 @@ SYNOPSIS
        dialog --print-maxsize
        dialog common-options box-options
 
-DESCRIPTION
-       Dialog is a program that will let you present a variety of questions or
-       display messages using dialog boxes from a shell script.   These  types
-       of  dialog  boxes  are implemented (though not all are necessarily com‐
-       piled into dialog):
-
-              buildlist, calendar, checklist, dselect, editbox, form, fselect,
-              gauge, infobox, inputbox, inputmenu, menu, mixedform,
-              mixedgauge, msgbox (message), passwordbox, passwordform, pause,
-              prgbox, programbox, progressbox, radiolist, rangebox, tailbox,
-              tailboxbg, textbox, timebox, treeview, and yesno (yes/no).
-
-       You can put more than one dialog box into a script:
-
-       •   Use the "--and-widget" token to force dialog to proceed to the next
-           dialog unless you have pressed ESC to cancel, or
-
-       •   Simply  add  the  tokens  for  the next dialog box, making a chain.
-           Dialog stops chaining  when  the  return  code  from  a  dialog  is
-           nonzero, e.g., Cancel or No (see DIAGNOSTICS).
-
-       Some  widgets,  e.g.,  checklist,  will  write text to dialog's output.
-       Normally that is the standard error, but there are options for changing
-       this:  “--output-fd”, “--stderr” and “--stdout”.  No text is written if
-       the Cancel button (or ESC) is pressed; dialog exits immediately in that
-       case.
-
 OPTIONS
-       All  options  begin  with  “--”  (two ASCII hyphens, for the benefit of
-       those using systems with deranged locale support).
 
        A “--” by itself is used as an escape, i.e.,  the  next  token  on  the
        command-line  is  not  treated  as  an  option.  This is different from
@@ -231,10 +275,6 @@ OPTIONS
    Common Options
        Most of the common options are reset before processing each widget.
 
-       --ascii-lines
-              Rather than draw graphics lines around boxes, draw ASCII “+” and
-              “-” in the same place.  See also “--no-lines”.
-
        --aspect ratio
               This gives you some control over the box dimensions  when  using
               auto  sizing (specifying 0 for height and width).  It represents
@@ -268,13 +308,6 @@ OPTIONS
                   --and-widget               --begin 6 6 --yesno "" 0 0
 
               Only the last widget is left visible:
-
-              dialog \
-                               --clear       --begin 2 2 --yesno "" 0 0 \
-                  --and-widget --clear       --begin 4 4 --yesno "" 0 0 \
-                  --and-widget               --begin 6 6 --yesno "" 0 0
-
-              All three widgets visible, staircase effect, ordered 3,2,1:
 
               dialog \
                                --keep-window --begin 2 2 --yesno "" 0 0 \
@@ -396,10 +429,6 @@ OPTIONS
        --extra-label string
               Override   the  label  used  for  “Extra”  buttons.   Note:  for
               inputmenu widgets, this defaults to “Rename”.
-
-       --help Prints the help message to the standard output and  exits.   The
-              help  message  is also printed if no options are given, or if an
-              unrecognized option is given.
 
        --help-button
               Show a help-button after “OK”  and  “Cancel”  buttons  in  boxes
