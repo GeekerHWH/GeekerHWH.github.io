@@ -152,6 +152,11 @@ sudo add-apt-repository ppa:example/ppa
 ```
 Here, ppa:example/ppa is the actual address of the PPA. After running this command, the system will ask for confirmation to add the PPA, and you need to confirm.
 
+#### GPG
+```bash
+apt-key list
+```
+
 ### dnf
 
 ### pipx
