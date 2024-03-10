@@ -40,4 +40,9 @@ RAID 5: 3 x Blocks to get 1 redundant copy, with theoriodically 3X speed up
 RAID 10: RAID 1 x RAID 0
 
 ![RAID 10](/imagesInBlogs/DevopsInterview/RAID10.jpg)
+
+2. When will it fall into kernel mode?
+- trap
+- interrupt
+- exception
 ## Networking
