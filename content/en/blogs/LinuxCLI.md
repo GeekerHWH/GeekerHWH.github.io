@@ -13,6 +13,8 @@ toc: true
 ---
 
 > This page only lists some commonly used commands and their options, for more details, please check `man` command or use the official docs!
+> `apropos` is another command you should master to search in `man`
+> I highly recommend you to read [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line/blob/master/README.md)
 
 ## Special Notes
 - the `=` in shell scripts is to set value of variable, ` = ` is conditional character
@@ -116,6 +118,25 @@ ftp> put source_path_of_your_file
   - -L redirect if recieve redirection code from server
   - -O set the name of output file the same as the file in remote server
 </details>
+
+## netstat
+```bash
+netstat -tulpn
+```
+
+## ss
+```bash
+ss -tulpn
+```
+
+## ps
+```bash
+ps -aux
+```
+
+## top
+
+## htop
 
 ## tar
 <details>
