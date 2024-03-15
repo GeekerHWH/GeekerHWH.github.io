@@ -344,7 +344,12 @@ params:
     email: hacker.huwenhao@gmail.com
     btnName: Mail me
   footer:
-    recentPosts: null
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/GeekerHWH
       linkedin: https://www.linkedin.com/in/wenhao-hu-37565a287/
