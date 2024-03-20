@@ -21,6 +21,10 @@ toc: true
 ![master-slave](/imagesInBlogs/DevopsInterview/master-slave.png)
 
 2. What is Optimistic Locking and Pessimistic Locking
+3. Differences between Delete and Truncate and Drop
+    - Delete: can filt data using `where` keyword, needs `commit` and supports `rollback`
+    - Truncate: remove all the data in the table and can't be rolled back
+    - Drop: remove a table and can't be rolled back
 
 ## Operating System
 1. RAID
