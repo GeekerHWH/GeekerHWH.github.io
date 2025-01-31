@@ -1,7 +1,7 @@
 ---
 baseURL: https://geekerhwh.pages.dev/
 languageCode: en-us
-title: Wenhao Hu (胡文昊) | BE AI at Chongqing University | DevOps/DBA Engineer
+title: GeekerHWH | Wenhao Hu (胡文昊) | Software Engineer at Meitian | BE AI at Chongqing University
 theme: hugo-profile
 languages:
   en:
@@ -83,7 +83,9 @@ Menus:
       weight: 3
 params:
   title: Wenhao Hu's Site
-  description: Text about my cool site
+  description: |
+    Hi, my name is Wenhao Hu(胡文昊 in Chinese), Nice to meet you! This is my personal site.
+    Hope you can enjoy it.
   staticPath: ""
   favicon: /hashProfile.png
   useBootstrapCDN: false
