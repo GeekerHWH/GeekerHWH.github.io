@@ -1,8 +1,11 @@
-Dev Logs.
+## To do
+- [ ] SEO 优化，现在google搜得到但是没啥用
 
-- [ ] Where to place RSS subscribe button for Chinese Users
-- [ ] Wechat integration(need change domain)
-- [x] Deploy my own vercel github-readme-stats (Mar 1 2024, fixed)
-- [x] Support Cloudflare global CDN (Feb 29 2024, fixed)
-- [x] 中文的zh_tags现在似乎不起作用(Feb 21 2024, fixed)
-- [x] Support Disqus community features (Feb 10 2024, fixed)
+## To deploy:
+1. login into cloudflare dashboard
+2. git push to main branch
+3. watch the status of the pages deployment until success
+
+## SEO
+[SEO新手指南](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn)
+[Google Search Console](https://search.google.com/search-console/performance/search-analytics?resource_id=https%3A%2F%2Fgeekerhwh.pages.dev%2F)
