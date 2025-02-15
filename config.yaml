@@ -27,7 +27,8 @@ outputs:
   page:
     - HTML
     - RSS
-Paginate: 3
+pagination:
+  pagerSize: 3
 enableRobotsTXT: true
 disqusShortname: https-geekerhwh-github-io
 markup:
@@ -205,8 +206,102 @@ params:
         - Ansible
         - Prometheuse
         - Grafana
-  techstack:
+  techstacks:
     enable: true
+    techstack:
+      - name: Go
+        image: /logos/golang.svg
+      - name: Python
+        image: /logos/python.svg
+      - name: Bash
+        image: /logos/bash.svg
+      - name: Rust
+        image: /logos/rust.svg
+      - name: HTML
+        image: /logos/html.svg
+      - name: CSS
+        image: /logos/css.svg
+      - name: JavaScript
+        image: /logos/javascript.svg
+      - name: Hugo
+        image: /logos/hugo.svg
+      - name: Bootstrap
+        image: /logos/bootstrap5.svg
+      - name: Vue
+        image: /logos/vue.svg
+      - name: TypeScript
+        image: /logos/typescript.svg
+      - name: Git
+        image: /logos/git.svg
+      - name: Docker
+        image: /logos/docker.svg
+      - name: Podman
+        image: /logos/podman.svg
+      - name: gRPC
+        image: /logos/grpc.svg
+      - name: Nginx
+        image: /logos/nginx.svg
+      - name: Apache HTTP Server
+        image: /logos/httpd.svg
+      - name: Redis
+        image: /logos/redis.svg
+      - name: GitHub Actions
+        image: /logos/githubactions.svg
+      - name: Kubernetes
+        image: /logos/kubernetes.svg
+      - name: Helm
+        image: /logos/helm.svg
+      - name: ArgoCD
+        image: /logos/argocd.svg
+      - name: Prometheus
+        image: /logos/prometheus.svg
+      - name: Grafana
+        image: /logos/grafana.svg
+      - name: MySQL
+        image: /logos/mysql.svg
+      - name: MariaDB
+        image: /logos/mariadb.svg
+      - name: TiDB
+        image: /logos/tidb.svg
+      - name: OpenStack
+        image: /logos/openstack.svg
+      - name: AWS
+        image: /logos/aws.svg
+      - name: Cloudflare
+        image: /logos/cloudflare.svg
+      - name: Azure
+        image: /logos/azure.svg
+      - name: Google Cloud Platform
+        image: /logos/gcp.svg
+      - name: Terraform
+        image: /logos/terraform.svg
+      - name: Ansible
+        image: /logos/ansible.svg
+      - name: Hugging Face
+        image: /logos/huggingface.svg
+      - name: PyTorch
+        image: /logos/pytorch.svg
+      - name: Vim
+        image: /logos/vim.svg
+      - name: VSCode
+        image: /logos/vscode.svg
+      - name: Debian
+        image: /logos/debian.svg
+      - name: Ubuntu
+        image: /logos/ubuntu.svg
+      - name: Red Hat
+        image: /logos/redhat.svg
+      - name: WineHQ
+        image: /logos/winehq.svg
+      - name: Microsoft Office
+        image: /logos/office.svg
+      - name: QEMU
+        image: /logos/qemu.svg
+      - name: VMware
+        image: /logos/vmware.svg
+
+
+
   projects:
     enable: true
     items:

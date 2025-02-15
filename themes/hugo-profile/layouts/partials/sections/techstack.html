@@ -1,55 +1,13 @@
-{{ if .Site.Params.techstack.enable | default false }}
+{{ if .Site.Params.techstacks.enable | default false }}
 <section id="techstack">
     <div class="container"><br>
         <h3 class="text-center">Tech Stack</h3>
         <div class="row justify-content-center px-3 px-md-5"
             style="display: flex; align-items: center; justify-content: center;">
             <p style="display: flex; flex-wrap: wrap; align-items: center;">
-                <img src="/logos/golang.svg" alt="Golang Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/python.svg" alt="Python Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/bash.svg" alt="Bash Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/html.svg" alt="HTML Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/css.svg" alt="CSS Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/javascript.svg" alt="JavaScript Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/hugo.svg" alt="Hugo Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/bootstrap5.svg" alt="Bootstrap Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/vue.svg" alt="Vue Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/typescript.svg" alt="TypeScript Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/git.svg" alt="Git Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/docker.svg" alt="Docker Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/podman.svg" alt="Podman Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/grpc.svg" alt="gRPC Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/nginx.svg" alt="Nginx Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/httpd.svg" alt="Apache HTTP Server Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/redis.svg" alt="Redis Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/githubactions.svg" alt="GitHub Actions Logo" width="40" height="40"
-                    style="margin: 5px;">
-                <img src="/logos/kubernetes.svg" alt="Kubernetes Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/helm.svg" alt="Helm Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/argocd.svg" alt="ArgoCD Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/prometheus.svg" alt="Prometheus Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/grafana.svg" alt="Grafana Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/mysql.svg" alt="MySQL Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/mariadb.svg" alt="MariaDB Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/tidb.svg" alt="TiDB Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/openstack.svg" alt="OpenStack Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/aws.svg" alt="AWS Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/cloudflare.svg" alt="Cloudflare Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/azure.svg" alt="Azure Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/gcp.svg" alt="Google Cloud Platform Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/terraform.svg" alt="Terraform Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/ansible.svg" alt="Ansible Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/huggingface.svg" alt="Hugging Face Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/pytorch.svg" alt="PyTorch Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/vim.svg" alt="Vim Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/vscode.svg" alt="VSCode Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/debian.svg" alt="Debian Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/ubuntu.svg" alt="Ubuntu Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/redhat.svg" alt="Red Hat Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/winehq.svg" alt="WineHQ Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/office.svg" alt="Microsoft Office Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/qemu.svg" alt="QEMU Logo" width="40" height="40" style="margin: 5px;">
-                <img src="/logos/vmware.svg" alt="VMware Logo" width="40" height="40" style="margin: 5px;">
+                {{ range .Site.Params.techstacks.techstack }}
+                <img src={{ .image }} alt="{{ .name }} Logo" width="40" height="40" style="margin: 5px;">
+                {{ end }}
             </p>
         </div>
     </div>
