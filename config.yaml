@@ -318,7 +318,7 @@ params:
           name: Repo Link
           link: https://github.com/GeekerHWH/mirrorSpeedTest
         badges:
-          - Go routine
+          - Go asynchronous programming
           - Debian
           - Docker
           - Github Actions
@@ -342,6 +342,22 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/GeekerHWH/CustomizeDebian12
+      - title: leetcode-scaffold
+        content:
+          A scaffold implemented in Rust to generate templates for Unit-Testing, solution note etc.
+          It's under deployment right now for personal learning.
+        image: /images/projects/leetcode-scaffold.jpg
+        featured:
+          name: Repo Link
+          link: https://github.com/GeekerHWH/leetcode-scaffold
+        badges:
+          - Rust Learning
+          - Leetcode
+          - Data Structures and Algorithms
+        links:
+          - icon: fab fa-github
+            url: https://github.com/GeekerHWH/leetcode-scaffold
+
   experience:
     enable: true
     title: Experience & Certification
