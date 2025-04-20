@@ -1,4 +1,11 @@
 ---
+# <--- hugo global configuration --->
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# <--- site specific configuration --->
 baseURL: https://geekerhwh.pages.dev/
 languageCode: en-us
 title: GeekerHWH | Wenhao Hu (胡文昊) | Software Engineer at Meitian | BE AI at Chongqing University
@@ -31,10 +38,7 @@ pagination:
   pagerSize: 3
 enableRobotsTXT: true
 disqusShortname: https-geekerhwh-github-io
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
+
 Menus:
   main:
     - Dropdown menu: null
@@ -45,7 +49,7 @@ Menus:
     - identifier: en
       title: English blogs
       name: English blogs
-      url: /blogs/
+      url: /en/blogs/
       parent: Blogs
       weight: 2
     - identifier: zh
@@ -120,12 +124,12 @@ params:
       enable: true
       showOnScrollUp: true
     menus:
-      disableAbout: false
+      disableAbout: true
       disableExperience: true
       disableEducation: true
-      disableProjects: false
+      disableProjects: true
       disableAchievements: false
-      disableContact: false
+      disableContact: true
   hero:
     enable: true
     intro: Nice to meet you, my name is
@@ -157,11 +161,11 @@ params:
     enable: true
     title: About Me
     image: /images/code.gif
-    # todolist: |-
-    #   To Do List:
-    #   1. [x] AWS SAA-C03 Cert
-    #   1. [ ] Azure SysAdmin Certification
-    #   1. [ ] CKAD & CKA
+    certifications: >-
+      Certifications:
+      <br>
+      <a href="https://credly.com/badges/a5ba8037-5804-4de6-ac45-f66d818e00cb"><img src="/images/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect" class="img-fluid" style="max-width: 100px;"></a>
+    
     content: >-
       I am currently a college student at [Chongqing
       University](https://www.cqu.edu.cn/) in Chongqing city, China.
@@ -171,23 +175,21 @@ params:
 
       I'm always eager to get my hands dirty.
 
+      Here are a few Pull Request to Open Source Community:
 
-      I am open to opportunities in DevOps, cloud administration, and machine learning.
+      - Microsoft/Inshellisense [PR#300](https://github.com/microsoft/inshellisense/pull/330)
+
 
       Please feel free to reach out if you are interested in collaborating with me.
 
-
-      <a href="https://github.com/GeekerHWH"><img align="center" src="https://github-readme-stats-geekerhwhs-projects.vercel.app/api/top-langs/?username=GeekerHWH&layout=compact&theme=buefy&hide_border=true" /></a>
-
-      <a href="https://credly.com/badges/a5ba8037-5804-4de6-ac45-f66d818e00cb"><img src="/images/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect"></a>
     skills:
       enable: true
       title: "Here are a few techs I've been working with recently:"
       items:
         - TiDB
         - Kubernetes
-        - VictoriaMetrics & Grafana
-        - Go & Shell & Rust
+        - Apache Airflow
+        - Go & Python & Shell
   techstacks:
     enable: true
     techstack:
