@@ -2,7 +2,7 @@
 baseURL: https://geekerhwh.pages.dev/
 languageCode: en-us
 title: GeekerHWH | Wenhao Hu (胡文昊) | Software Engineer at Meitian | BE AI at Chongqing University
-theme: hugo-profile
+theme: my-hugo-profile # using customized theme istead of original hugo-profile
 languages:
   en:
     languageName: English
@@ -132,24 +132,8 @@ params:
     title: Wenhao Hu
     subtitle: DevOps Engineer at Meituan
     content: >-
-      #### Site Manual
+      Always be thirsty to touch new things, new peoples, new ideas, new technologies.
 
-      Welcome to my site! Feel free to explore my work and learn more about me.
-
-      My site is also my second brain database, it records my knowledge and memory.
-
-      To search specific content you can use ctrl+K to look through the index.
-
-      This site is imaginative, philosophical, and full of technical and financial ideas, hope you enjoy it
-
-
-      ##### %$@!~&*
-
-      I'm racing with time, this site will witness this great game. And this game never gonna ends.
-
-      My mother is a great woman, every lesson she has told makes me a better person.
-
-      We both have the goal of living a better life.
     image: /images/gallery/me3.JPG
     bottomImage:
       enable: true
@@ -173,11 +157,11 @@ params:
     enable: true
     title: About Me
     image: /images/code.gif
-    todolist: |-
-      To Do List:
-      1. [x] AWS SAA-C03 Cert
-      1. [ ] Azure SysAdmin Certification
-      1. [ ] CKAD & CKA
+    # todolist: |-
+    #   To Do List:
+    #   1. [x] AWS SAA-C03 Cert
+    #   1. [ ] Azure SysAdmin Certification
+    #   1. [ ] CKAD & CKA
     content: >-
       I am currently a college student at [Chongqing
       University](https://www.cqu.edu.cn/) in Chongqing city, China.
@@ -200,12 +184,10 @@ params:
       enable: true
       title: "Here are a few techs I've been working with recently:"
       items:
-        - KVM (libvert)
         - TiDB
         - Kubernetes
-        - Ansible
-        - Prometheuse
-        - Grafana
+        - VictoriaMetrics & Grafana
+        - Go & Shell & Rust
   techstacks:
     enable: true
     techstack:
@@ -225,8 +207,8 @@ params:
         image: /logos/javascript.svg
       - name: Hugo
         image: /logos/hugo.svg
-      - name: Bootstrap
-        image: /logos/bootstrap5.svg
+      - name: React
+        image: /logos/react.svg
       - name: Vue
         image: /logos/vue.svg
       - name: TypeScript
@@ -247,6 +229,8 @@ params:
         image: /logos/redis.svg
       - name: GitHub Actions
         image: /logos/githubactions.svg
+      - name: Apache Airflow
+        image: /logos/airflow.svg
       - name: Kubernetes
         image: /logos/kubernetes.svg
       - name: Helm
@@ -365,7 +349,7 @@ params:
       - job: Blade DevOps & SRE (Intern)
         company: Meituan
         companyUrl: https://www.meituan.com/en-US/about-us
-        date: May 2024 - Dec 2024
+        date: May 2024 - Utill now
         featuredLink:
           enable: false
           name: View the project

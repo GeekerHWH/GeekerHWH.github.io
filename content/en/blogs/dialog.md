@@ -20,14 +20,10 @@ please check `dialog -h` or much more detailed one `man dialog`.
 
 Like any other front-end technology, I highly recommend you to follow the instruction with hands dirty.
 
-
-
 ## Universal Options
 ```bash
 --title <title> to specify the widget's title
 ```
-
-
 
 ## Basic Box options
 
