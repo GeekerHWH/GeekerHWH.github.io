@@ -8,8 +8,8 @@
                 <div class="image d-flex px-3">
                     <img src="{{ .Site.Params.about.image }}" class="img-thumbnail mx-auto" alt="">
                 </div>
-                <div class="d-flex px-3">
-                    {{ .Site.Params.about.todolist | markdownify }}
+                <div class="px-3 py-6">
+                    {{ .Site.Params.about.certifications | markdownify }}
                 </div>
             </div>
             {{ end }}
@@ -24,6 +24,7 @@
                     {{ end }}
                 </ul>
                 {{ end }}
+                <a href="https://github.com/GeekerHWH"><img align="center" src="https://github-readme-stats-geekerhwhs-projects.vercel.app/api/top-langs/?username=GeekerHWH&layout=compact&theme=buefy&hide_border=true" /></a>
             </div>
         </div>
     </div>
